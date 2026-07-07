@@ -1,0 +1,69 @@
+.page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: 36px 32px;
+}
+
+.logo {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.logoDot {
+  color: var(--accent);
+}
+
+.tagline {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-bottom: 28px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.error {
+  background: var(--danger-soft);
+  color: var(--danger);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.88rem;
+}
+
+.submit {
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px 20px;
+}
+
+.switch {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}

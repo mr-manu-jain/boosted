@@ -1,0 +1,10 @@
+.scroller {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.inner {
+  min-width: 780px;
+  height: 170px;
+}

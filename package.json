@@ -1,0 +1,19 @@
+{
+  "name": "boosted",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Minimalist time tracking app with beautiful visuals",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client && npm run build -w server",
+    "start": "npm run start -w server",
+    "seed": "npm run seed -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

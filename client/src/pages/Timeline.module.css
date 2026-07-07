@@ -1,0 +1,221 @@
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.trackingCard {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  margin-bottom: 26px;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: var(--shadow-lifted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.trackingInfo {
+  min-width: 0;
+}
+
+.trackingLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.trackingProject {
+  font-size: 1.15rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trackingTask {
+  font-size: 0.86rem;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.trackingRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.trackingClock {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.stopBtn {
+  background: rgba(255, 255, 255, 0.94);
+  color: #1a1a19;
+  padding: 10px 22px;
+}
+
+.stopBtn:hover:not(:disabled) {
+  background: #fff;
+  opacity: 1;
+}
+
+.pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 8px;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+}
+
+.dayGroup {
+  margin-bottom: 26px;
+}
+
+.dayHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 4px;
+  margin-bottom: 10px;
+}
+
+.dayName {
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.dayTotal {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.entryList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.entryRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+}
+
+.entryRow:hover .entryDelete {
+  opacity: 0.6;
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.entryMain {
+  flex: 1;
+  min-width: 0;
+}
+
+.entryProject {
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.entryMeta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.durationChip {
+  flex-shrink: 0;
+  padding: 6px 13px;
+  border-radius: 999px;
+  font-size: 0.83rem;
+  font-weight: 700;
+  background: var(--surface-2);
+  color: var(--text-secondary);
+}
+
+.entryDelete {
+  flex-shrink: 0;
+  display: inline-flex;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.entryDelete:hover {
+  opacity: 1 !important;
+  color: var(--danger);
+}
+
+.empty {
+  padding: 56px 24px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.emptyTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+@media (max-width: 560px) {
+  .trackingCard {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .trackingRight {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .entryDelete {
+    opacity: 0.4;
+  }
+}

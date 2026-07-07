@@ -1,0 +1,106 @@
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.row:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lifted);
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.name {
+  flex: 1;
+  min-width: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.startBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.12s ease;
+}
+
+.startBtn:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.startBtn:active {
+  transform: scale(0.95);
+}
+
+.stopBtn {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.stopBtn:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+.elapsed {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.emptyTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.hint {
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+}

@@ -1,0 +1,157 @@
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--surface-2);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover {
+  color: var(--text-primary);
+}
+
+.chipActive {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.chipActive:hover {
+  color: var(--accent-ink);
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.tilesWide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.section {
+  padding: 20px 22px;
+  margin-bottom: 22px;
+}
+
+.sectionTitle {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.sectionSub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.barLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 12px;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.legendDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.filterRow {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 14px;
+  scrollbar-width: none;
+}
+
+.filterRow::-webkit-scrollbar {
+  display: none;
+}
+
+.filterRow .chip {
+  flex-shrink: 0;
+}
+
+.streaks {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.streakValue {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.flame {
+  color: var(--accent);
+}
+
+.empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .tiles {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tiles > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .section {
+    padding: 16px;
+  }
+}
